@@ -70,7 +70,7 @@ BOOK/
 
 - **books** - 书籍表
 - **chapters** - 章节表
-- **reading_progress** - 阅读进度表
+- **reading progress** - 阅读进度表
 - **bookmarks** - 书签表
 
 ## 示例数据
