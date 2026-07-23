@@ -1,3 +1,81 @@
-# Read-Novel-Simulator-V1.5
-The read novel simulator is on based a china novel app, Users can be upload your favourite book. 
-# 更新内容 Updates
+# 小说阅读器
+
+一个基于 Python + Flask + SQLite 的移动端适配小说阅读器。
+
+## 功能特性
+
+- 📚 **书架管理** - 展示所有书籍，点击进入阅读
+- 📖 **舒适阅读** - 支持字号调节、多种主题（日间/护眼/暖色/夜间）
+- 📑 **章节目录** - 清晰的章节列表，快速定位
+- 🔖 **书签功能** - 随时添加书签，方便回看
+- 💾 **阅读进度** - 自动保存阅读进度，下次继续阅读
+- 📱 **移动端适配** - 完美适配手机屏幕，支持滑动翻页
+- 💻 **响应式设计** - 同时支持平板和桌面端
+
+## 技术栈
+
+- **后端**: Python + Flask
+- **数据库**: SQLite（轻量级，无需额外安装）
+- **前端**: HTML + CSS + JavaScript（原生，无框架依赖）
+
+## 快速开始
+
+### 安装依赖
+
+```bash
+pip install -r requirements.txt
+```
+
+### 启动服务
+
+```bash
+python app.py
+```
+
+### 访问
+
+在浏览器中打开: http://localhost:5000
+
+手机访问：确保手机和电脑在同一局域网，然后访问电脑的IP地址，例如：http://192.168.1.100:5000
+
+## 项目结构
+
+```
+BOOK/
+├── app.py              # Flask 主程序
+├── requirements.txt    # 依赖包
+├── novel.db            # SQLite 数据库（自动创建）
+├── templates/          # HTML 模板
+│   ├── index.html      # 书架首页
+│   ├── read.html       # 阅读页面
+│   ├── catalog.html    # 目录页面
+│   └── bookmarks.html  # 书签页面
+└── static/             # 静态资源
+    ├── css/
+    │   └── style.css   # 样式文件
+    └── js/
+        └── common.js   # 公共脚本
+```
+
+## 阅读操作说明
+
+- **点击屏幕中间** - 显示/隐藏工具栏
+- **左右滑动** - 切换上一章/下一章
+- **键盘左右方向键** - 切换上一章/下一章（桌面端）
+- **ESC键** - 返回上一页（桌面端）
+- **字号调节** - 14px ~ 28px
+- **阅读主题** - 日间、护眼、暖色、夜间
+
+## 数据库表结构
+
+- **books** - 书籍表
+- **chapters** - 章节表
+- **reading_progress** - 阅读进度表
+- **bookmarks** - 书签表
+
+## 示例数据
+
+首次运行会自动添加3本示例小说：
+1. 剑啸江湖（武侠仙侠）- 3章
+2. 都市之最强医神（都市异能）- 2章
+3. 星际迷航：新纪元（科幻未来）- 1章
